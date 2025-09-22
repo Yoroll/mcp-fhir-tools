@@ -35,6 +35,8 @@ app.post("/messages", async (req, res) => {
   await transport.handlePostMessage(req, res);
 });
 
-app.listen(3004, () =>
-  logger.info("Terminology Tools server listening on port 3004"),
+const appPort = process.env.PORT ?? 3004
+
+app.listen(appPort, () =>
+  logger.info(`Terminology Tools server listening on port ${appPort}`),
 );
