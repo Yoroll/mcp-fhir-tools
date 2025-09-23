@@ -37,6 +37,6 @@ app.post("/messages", async (req: express.Request, res: express.Response) => {
 
 const appPort = process.env.PORT ?? 3003
 
-app.listen(3003, () =>
+app.listen(appPort, () =>
   logger.info(`Generic FHIR Tools server listening on port ${appPort}`),
 );
